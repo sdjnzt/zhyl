@@ -2,7 +2,7 @@
   "name": "smart-medical-triage-platform",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://[your-username].github.io/smart-medical-triage-platform",
+  "homepage": "https://sdjnzt.github.io/smart-medical-triage-platform",
   "description": "智慧医疗导医分诊平台 - 基于React + Ant Design开发的现代化医疗服务系统",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
