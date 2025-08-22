@@ -35,7 +35,7 @@ function App() {
   };
 
   return (
-    <Router basename="/smart-medical-triage-platform">
+    <Router basename="/zhyl">
       <Routes>
         {/* 登录页面 */}
         <Route 
