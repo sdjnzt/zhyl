@@ -1,6 +1,10 @@
 # 微山县微山湖医院智慧医疗导医分诊平台
 
-基于React + Ant Design开发的现代化医疗服务系统，为医院提供智能化的导医分诊解决方案，通过数字化手段提升患者就诊体验，优化医院服务流程，实现医疗资源的合理配置。
+<div align="center">
+  <img src="public/img/logo.png" alt="微山湖医院logo" width="120" style="border-radius: 8px; margin-bottom: 16px;">
+</div>
+
+基于React + Ant Design开发的现代化医疗服务系统，为微山县微山湖医院提供智能化的导医分诊解决方案，通过数字化手段提升患者就诊体验，优化医院服务流程，实现医疗资源的合理配置。
 
 ## 功能特性
 

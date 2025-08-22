@@ -240,18 +240,60 @@ const MainLayout = ({ children }) => {
       >
         <div className="logo" style={{ 
           height: 64, 
-          padding: '16px', 
+          padding: '12px 16px', 
           display: 'flex',
           alignItems: 'center',
           justifyContent: collapsed ? 'center' : 'flex-start',
           color: '#fff',
-          fontSize: '15px',
+          fontSize: '14px',
           fontWeight: 'bold',
-          background: 'rgba(255, 255, 255, 0.1)',
+          background: '#1677ff',
+          borderBottom: '2px solid #0958d9',
           overflow: 'hidden'
         }}>
-          {!collapsed && <span>微山县微山湖医院智慧医疗导医分诊平台</span>}
-          {collapsed && <CloudServerOutlined style={{ fontSize: '24px' }} />}
+          {!collapsed && (
+            <>
+              <img 
+                src="/zhyl/img/logo.png" 
+                alt="微山湖医院logo" 
+                style={{ 
+                  height: '42px', 
+                  width: 'auto',
+                  marginRight: '12px',
+                  filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))'
+                }} 
+              />
+              <div style={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                justifyContent: 'center',
+                lineHeight: '1.3'
+              }}>
+                {/* <div style={{ 
+                  fontSize: '15px', 
+                  fontWeight: '600',
+                  color: '#fff',
+                  textShadow: '0 1px 2px rgba(0,0,0,0.3)'
+                }}>微山湖医院</div> */}
+                {/* <div style={{ 
+                  fontSize: '12px', 
+                  color: 'rgba(255,255,255,0.9)',
+                  fontWeight: '400'
+                }}>智慧医疗分诊平台</div> */}
+              </div>
+            </>
+          )}
+          {collapsed && (
+            <img 
+              src="/zhyl/img/logo.png" 
+              alt="微山湖医院logo" 
+              style={{ 
+                height: '34px', 
+                width: 'auto',
+                filter: 'drop-shadow(0 2px 4px rgba(0,0,0,0.2))'
+              }} 
+            />
+          )}
         </div>
         <div style={{ 
           height: 'calc(100vh - 64px)', 

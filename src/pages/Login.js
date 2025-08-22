@@ -132,7 +132,19 @@ const Login = ({ onLogin }) => {
             }}
           >
             <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-              <Title level={3} style={{ marginBottom: '8px', color: '#0958d9', fontWeight: 700, letterSpacing: 1 }}>欢迎登录微山县微山湖医院智慧医疗导医分诊平台</Title>
+              <div style={{ marginBottom: '20px' }}>
+                <img 
+                  src="/zhyl/img/logo.png" 
+                  alt="微山湖医院logo" 
+                  style={{ 
+                    height: '88px', 
+                    width: 'auto',
+                    marginBottom: '16px',
+                    filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.1))'
+                  }} 
+                />
+              </div>
+              <Title level={3} style={{ marginBottom: '8px', color: '#0958d9', fontWeight: 700, letterSpacing: 1 }}>微山湖医院智慧医疗导医分诊平台</Title>
               <Text type="secondary" style={{ fontSize: 16 }}>为医院与患者提供智能、高效、便捷的分诊服务</Text>
             </div>
             {loginError && (
