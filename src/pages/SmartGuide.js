@@ -346,20 +346,69 @@ export default function SmartGuide() {
       if (!input.trim() || isNaN(Number(input))) return message.warning('请输入您的年龄（数字）');
       setMultiStep(s => ({ ...s, age: input, step: 3 }));
       setInput('');
-      // 生成推荐
+      // 生成推荐 - 增强症状匹配逻辑
       const { symptom, gender, age } = { ...multiStep, age: input };
-      // 简单模拟推荐多个科室/医生
       let deptList = [];
-      if (/咳嗽|发烧|感冒|高血压|糖尿病/.test(symptom)) deptList.push(departments[0]);
-      if (/外伤|骨折|手术|刀口/.test(symptom)) deptList.push(departments[1]);
-      if (/小孩|儿童|小儿|疫苗/.test(symptom) || (Number(age) < 14)) deptList.push(departments[2]);
-      if (/妇女|怀孕|产检|月经/.test(symptom) || (gender.includes('女') && Number(age) > 12)) deptList.push(departments[3]);
-      if (/中医|调理|针灸|推拿/.test(symptom)) deptList.push(departments[4]);
-      if (deptList.length === 0) deptList = [departments[0]];
+      let matchedSymptoms = [];
+      
+      // 内科症状匹配
+      const internalSymptoms = ['咳嗽', '发烧', '感冒', '高血压', '糖尿病', '头痛', '胸闷', '心慌', '气短', '腹痛', '恶心', '呕吐', '腹泻', '便秘', '失眠', '乏力', '头晕', '血压高', '血糖高', '胃痛', '消化不良'];
+      if (internalSymptoms.some(s => symptom.includes(s))) {
+        deptList.push(departments[0]);
+        matchedSymptoms.push('内科相关症状');
+      }
+      
+      // 外科症状匹配
+      const surgicalSymptoms = ['外伤', '骨折', '手术', '刀口', '创伤', '摔伤', '撞伤', '割伤', '烫伤', '烧伤', '肿块', '包块', '疝气', '痔疮', '阑尾炎'];
+      if (surgicalSymptoms.some(s => symptom.includes(s))) {
+        deptList.push(departments[1]);
+        matchedSymptoms.push('外科相关症状');
+      }
+      
+      // 儿科症状匹配
+      const pediatricSymptoms = ['小孩', '儿童', '小儿', '疫苗', '接种', '婴儿', '新生儿', '幼儿', '宝宝'];
+      if (pediatricSymptoms.some(s => symptom.includes(s)) || Number(age) < 14) {
+        deptList.push(departments[2]);
+        matchedSymptoms.push('儿科相关');
+      }
+      
+      // 妇产科症状匹配
+      const gynecologySymptoms = ['妇女', '怀孕', '产检', '月经', '白带', '阴道', '子宫', '卵巢', '乳房', '妊娠', '孕期', '分娩', '产后', '妇科', '例假'];
+      if (gynecologySymptoms.some(s => symptom.includes(s)) || (gender && gender.includes('女') && Number(age) > 12 && Number(age) < 60)) {
+        deptList.push(departments[3]);
+        matchedSymptoms.push('妇产科相关症状');
+      }
+      
+      // 中医科症状匹配
+      const tcmSymptoms = ['中医', '调理', '针灸', '推拿', '按摩', '拔罐', '中药', '体质', '养生', '保健', '亚健康', '慢性疲劳'];
+      if (tcmSymptoms.some(s => symptom.includes(s))) {
+        deptList.push(departments[4]);
+        matchedSymptoms.push('中医调理相关');
+      }
+      
+      // 急诊科症状匹配
+      const emergencySymptoms = ['急诊', '急救', '昏迷', '休克', '大出血', '呼吸困难', '胸痛', '中毒', '溺水', '触电', '严重外伤'];
+      if (emergencySymptoms.some(s => symptom.includes(s))) {
+        deptList.push(departments[5]);
+        matchedSymptoms.push('急诊相关症状');
+      }
+      
+      // 如果没有匹配到任何科室，推荐内科作为默认科室
+      if (deptList.length === 0) {
+        deptList = [departments[0]];
+        matchedSymptoms.push('建议先到内科就诊');
+      }
+      
       const docList = doctors.filter(d => deptList.some(dep => dep.name === d.dept));
       setRecommendList(docList.map(d => ({ ...d, dept: deptList.find(dep => dep.name === d.dept) })));
-      setRecommend({ deptList, docList });
-      setHistory(h => [{ question: `${symptom}（${gender}，${age}岁）`, deptList, docList, time: new Date().toLocaleTimeString() }, ...h]);
+      setRecommend({ deptList, docList, matchedSymptoms });
+      setHistory(h => [{ 
+        question: `${symptom}（${gender}，${age}岁）`, 
+        deptList, 
+        docList, 
+        matchedSymptoms,
+        time: new Date().toLocaleTimeString() 
+      }, ...h]);
     }
   };
 
@@ -394,22 +443,77 @@ export default function SmartGuide() {
 
   const handleSearch = () => {
     if (!input.trim()) return message.warning('请输入搜索内容');
-    // 模拟搜索逻辑
-    const results = [];
-    if (/微山县微山湖医院内科|感冒|发烧|高血压|糖尿病/.test(input)) results.push(departments[0]);
-    if (/微山县微山湖医院外科|外伤|手术/.test(input)) results.push(departments[1]);
-    if (/微山县微山湖医院儿科|儿童|小孩|疫苗/.test(input)) results.push(departments[2]);
-    if (/微山县微山湖医院妇产科|妇科|产科|怀孕/.test(input)) results.push(departments[3]);
-    if (/中医|针灸|推拿/.test(input)) results.push(departments[4]);
-    if (/急诊|急救|急症/.test(input)) results.push(departments[5]);
-
-    if (results.length > 0) {
-      setRecommendList(results);
-      setRecommend({ deptList: results, docList: [] });
-      message.success(`找到 ${results.length} 个相关科室`);
-    } else {
-      message.info('未找到相关科室，建议咨询导医台');
+    
+    // 使用增强的症状匹配逻辑
+    const symptom = input.trim();
+    let deptList = [];
+    let matchedSymptoms = [];
+    
+    // 内科症状匹配
+    const internalSymptoms = ['咳嗽', '发烧', '感冒', '高血压', '糖尿病', '头痛', '胸闷', '心慌', '气短', '腹痛', '恶心', '呕吐', '腹泻', '便秘', '失眠', '乏力', '头晕', '血压高', '血糖高', '胃痛', '消化不良', '内科'];
+    if (internalSymptoms.some(s => symptom.includes(s))) {
+      deptList.push(departments[0]);
+      matchedSymptoms.push('内科相关症状');
     }
+    
+    // 外科症状匹配
+    const surgicalSymptoms = ['外伤', '骨折', '手术', '刀口', '创伤', '摔伤', '撞伤', '割伤', '烫伤', '烧伤', '肿块', '包块', '疝气', '痔疮', '阑尾炎', '外科'];
+    if (surgicalSymptoms.some(s => symptom.includes(s))) {
+      deptList.push(departments[1]);
+      matchedSymptoms.push('外科相关症状');
+    }
+    
+    // 儿科症状匹配
+    const pediatricSymptoms = ['小孩', '儿童', '小儿', '疫苗', '接种', '婴儿', '新生儿', '幼儿', '宝宝', '儿科'];
+    if (pediatricSymptoms.some(s => symptom.includes(s))) {
+      deptList.push(departments[2]);
+      matchedSymptoms.push('儿科相关');
+    }
+    
+    // 妇产科症状匹配
+    const gynecologySymptoms = ['妇女', '怀孕', '产检', '月经', '白带', '阴道', '子宫', '卵巢', '乳房', '妊娠', '孕期', '分娩', '产后', '妇科', '产科', '例假'];
+    if (gynecologySymptoms.some(s => symptom.includes(s))) {
+      deptList.push(departments[3]);
+      matchedSymptoms.push('妇产科相关症状');
+    }
+    
+    // 中医科症状匹配
+    const tcmSymptoms = ['中医', '调理', '针灸', '推拿', '按摩', '拔罐', '中药', '体质', '养生', '保健', '亚健康', '慢性疲劳'];
+    if (tcmSymptoms.some(s => symptom.includes(s))) {
+      deptList.push(departments[4]);
+      matchedSymptoms.push('中医调理相关');
+    }
+    
+    // 急诊科症状匹配
+    const emergencySymptoms = ['急诊', '急救', '昏迷', '休克', '大出血', '呼吸困难', '胸痛', '中毒', '溺水', '触电', '严重外伤', '急症'];
+    if (emergencySymptoms.some(s => symptom.includes(s))) {
+      deptList.push(departments[5]);
+      matchedSymptoms.push('急诊相关症状');
+    }
+
+    if (deptList.length > 0) {
+      const docList = doctors.filter(d => deptList.some(dep => dep.name === d.dept));
+      setRecommendList(deptList);
+      setRecommend({ deptList, docList, matchedSymptoms });
+      setHistory(h => [{ 
+        question: symptom, 
+        deptList, 
+        docList, 
+        matchedSymptoms,
+        time: new Date().toLocaleTimeString() 
+      }, ...h]);
+      message.success(`找到 ${deptList.length} 个相关科室`);
+    } else {
+      message.info('未找到相关科室，建议先到内科就诊或咨询导医台');
+      // 提供默认推荐
+      setRecommend({ 
+        deptList: [departments[0]], 
+        docList: doctors.filter(d => d.dept === departments[0].name),
+        matchedSymptoms: ['建议先到内科就诊'] 
+      });
+    }
+    
+    setInput(''); // 清空输入框
   };
 
   const tabs = [
@@ -531,6 +635,26 @@ export default function SmartGuide() {
             {/* 推荐结果 */}
             {recommend && (
               <div style={{ marginTop: 16 }}>
+                {recommend.matchedSymptoms && recommend.matchedSymptoms.length > 0 && (
+                  <Alert
+                    message="症状分析结果"
+                    description={
+                      <div>
+                        <Text>根据您的症状描述，我们识别到：</Text>
+                        <div style={{ marginTop: 8 }}>
+                          {recommend.matchedSymptoms.map((symptom, index) => (
+                            <Tag key={index} color="processing" style={{ marginBottom: 4 }}>
+                              {symptom}
+                            </Tag>
+                          ))}
+                        </div>
+                      </div>
+                    }
+                    type="success"
+                    showIcon
+                    style={{ marginBottom: 16 }}
+                  />
+                )}
                 <Title level={5}>推荐科室：</Title>
                 <Row gutter={[16, 16]}>
                   {recommend.deptList.map((dept, index) => (
