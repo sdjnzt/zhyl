@@ -229,7 +229,7 @@ const initialNotices = [
     id: 4, 
     content: '微山县微山湖医院重要通知：6月10日将进行系统升级维护，请提前保存数据。',
     type: 'warning', 
-    publishTime: '2024-05-28 10:00', 
+    publishTime: '2025-05-28 10:00',
     expireTime: '2025-08-10 23:59',
     priority: 'high',
     author: '信息科',
