@@ -17,7 +17,7 @@ git add .
 
 echo.
 echo 正在提交更改...
-git commit -m "修复GitHub Pages路由问题和SPA支持"
+git commit -m "修复GitHub Actions版本问题和SPA路由支持"
 
 echo.
 echo 正在推送到GitHub...
