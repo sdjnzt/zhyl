@@ -1,24 +1,25 @@
-# 邹城市机关事务服务中心云电脑服务项目
+# 智慧医疗导医分诊平台
 
-基于React + Ant Design开发的政府机关国产化云桌面管理系统，通过云电脑服务包实现构建高效协同的办公环境、降低运维管理成本、强化数据安全保障及提升服务水平和形象等，为客户带来更高的办公效率及更佳的服务。
+基于React + Ant Design开发的现代化医疗服务系统，为医院提供智能化的导医分诊解决方案，通过数字化手段提升患者就诊体验，优化医院服务流程，实现医疗资源的合理配置。
 
 ## 功能特性
 
-- **云电脑管理**：创建、编辑、删除和管理虚拟云电脑
-- **服务包管理**：管理不同部门的云电脑服务包模板
-- **备份策略**：配置和管理数据备份策略
-- **终端管理**：管理和监控终端设备
-- **资源监控**：实时监控系统资源使用情况
-- **安全管控**：强化数据安全保障
-- **协同办公**：构建高效协同的办公环境
+- **智能导医**：提供智能问答和导医服务，帮助患者快速了解就诊流程
+- **分诊管理**：护士分诊工作站，实现患者智能分诊和排队管理
+- **叫号系统**：医生叫号工作站，支持语音叫号和显示屏展示
+- **多媒体导览**：提供医院楼层地图和多媒体导览服务
+- **门诊排队**：实时显示各科室排队情况和预计等待时间
+- **药房管理**：药房取药排队管理和叫号系统
+- **HIS集成**：与医院信息系统深度集成，数据实时同步
+- **通知公告**：医院公告和通知信息发布管理
 
 ## 项目优势
 
-- **降低运维成本**：集中化管理，减少IT运维工作量
-- **提升办公效率**：快速部署，随时随地访问办公环境
-- **强化数据安全**：数据集中存储，多重安全防护
-- **提升服务水平**：统一标准，提升服务质量
-- **优化资源配置**：按需分配，提高资源利用率
+- **提升患者体验**：智能导医减少患者困惑，缩短就诊等待时间
+- **优化医疗流程**：数字化分诊提高医疗服务效率
+- **减轻医护负担**：自动化叫号和排队管理，减少人工干预
+- **数据驱动决策**：实时数据统计，为医院管理提供决策支持
+- **系统集成性强**：与现有HIS系统无缝集成
 
 ## 开始使用
 
@@ -32,8 +33,8 @@
 1. 克隆项目到本地：
 
 ```bash
-git clone https://github.com/[your-username]/hospital-cloud-desktop.git
-cd hospital-cloud-desktop
+git clone https://github.com/[your-username]/smart-medical-triage-platform.git
+cd smart-medical-triage-platform
 ```
 
 2. 安装依赖：
@@ -66,19 +67,41 @@ npm run build
 
 ## 技术栈
 
-- React 18
-- Ant Design 5
-- React Router 6
-- Moment.js
+- **前端框架**：React 18
+- **UI组件库**：Ant Design 5
+- **路由管理**：React Router 6
+- **图表组件**：ECharts 5.6.0 + Ant Design Plots
+- **日期处理**：Moment.js
+- **文件操作**：xlsx + file-saver
+- **图标库**：Ant Design Icons
 
 ## 项目结构
 
 ```
 src/
   ├── components/     # 通用组件
+  │   ├── BannerCarousel.js      # 轮播图组件
+  │   ├── FloorMap.js            # 楼层地图组件
+  │   ├── MediaFilter.js         # 媒体过滤组件
+  │   ├── NoticeBar.js           # 通知栏组件
+  │   ├── NotificationCenter.js  # 通知中心组件
+  │   ├── QRSection.js           # 二维码组件
+  │   └── SmartQAEntry.js        # 智能问答入口组件
   ├── pages/         # 页面组件
+  │   ├── Dashboard.js           # 仪表盘
+  │   ├── DoctorCallStation.js   # 医生叫号工作站
+  │   ├── HISIntegration.js      # HIS系统集成
+  │   ├── Login.js               # 登录页面
+  │   ├── MultimediaGuide.js     # 多媒体导览
+  │   ├── MultimediaPublish.js   # 多媒体发布
+  │   ├── NurseTriageStation.js  # 护士分诊工作站
+  │   ├── OutpatientQueue.js     # 门诊排队
+  │   ├── PharmacyQueue.js       # 药房排队
+  │   └── SmartGuide.js          # 智能导医
   ├── layouts/       # 布局组件
-  ├── utils/         # 工具函数
+  │   └── MainLayout.js          # 主布局
+  ├── services/      # 服务层
+  │   └── hisClient.js           # HIS系统客户端
   ├── App.js         # 应用入口
   └── index.js       # 项目入口
 ```

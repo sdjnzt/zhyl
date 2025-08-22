@@ -1,9 +1,9 @@
 {
-  "name": "zoucheng-government-cloud-desktop",
+  "name": "smart-medical-triage-platform",
   "version": "1.0.0",
   "private": true,
-  "homepage": ".",
-  "description": "邹城市机关事务服务中心云电脑服务项目 - 构建高效协同的办公环境",
+  "homepage": "https://[your-username].github.io/smart-medical-triage-platform",
+  "description": "智慧医疗导医分诊平台 - 基于React + Ant Design开发的现代化医疗服务系统",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@ant-design/plots": "^1.2.5",
