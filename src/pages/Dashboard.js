@@ -131,11 +131,11 @@ const userActivity = [
 
 // 科室访问统计
 const departmentStats = [
-  { name: '内科', visits: 156, growth: '+15%', color: '#1890ff' },
-  { name: '外科', visits: 89, growth: '+8%', color: '#faad14' },
-  { name: '儿科', visits: 234, growth: '+22%', color: '#52c41a' },
-  { name: '妇产科', visits: 178, growth: '+12%', color: '#eb2f96' },
-  { name: '急诊科', visits: 67, growth: '+5%', color: '#f5222d' }
+  { name: '微山县微山湖医院内科', visits: 156, growth: '+15%', color: '#1890ff' },
+  { name: '微山县微山湖医院外科', visits: 89, growth: '+8%', color: '#faad14' },
+  { name: '微山县微山湖医院儿科', visits: 234, growth: '+22%', color: '#52c41a' },
+  { name: '微山县微山湖医院妇产科', visits: 178, growth: '+12%', color: '#eb2f96' },
+  { name: '微山县微山湖医院急诊科', visits: 67, growth: '+5%', color: '#f5222d' }
 ];
 
 // 最近活动
@@ -183,7 +183,7 @@ export default function Dashboard() {
               <Col xs={24} md={16}>
                 <Title level={2} style={{ marginBottom: 8, color: 'white', fontWeight: 700 }}>
                   <SmileOutlined style={{ marginRight: 12 }} />
-                  欢迎使用智慧医疗导医分诊平台
+                  欢迎使用微山县微山湖医院智慧医疗导医分诊平台
                 </Title>
                 <Paragraph style={{ fontSize: 18, color: 'rgba(255,255,255,0.9)', margin: 0 }}>
                   本平台集成多媒体信息发布、HIS系统对接、健康宣教、智慧导诊等功能，助力医院信息化与智能化升级。

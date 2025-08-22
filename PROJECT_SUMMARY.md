@@ -1,13 +1,13 @@
 # 项目配置总结
 
-本文档总结了为将智慧医疗导医分诊平台部署到GitHub Pages所做的所有配置和修改。
+本文档总结了为将微山县微山湖医院智慧医疗导医分诊平台部署到GitHub Pages所做的所有配置和修改。
 
 ## 📋 完成的配置项目
 
 ### 1. 项目信息更新 ✅
 - **package.json**: 更新了项目名称、描述和homepage配置
   - 项目名称：`smart-medical-triage-platform`
-  - 描述：智慧医疗导医分诊平台
+  - 描述：微山县微山湖医院智慧医疗导医分诊平台
   - Homepage：配置为GitHub Pages URL格式
 
 ### 2. README文档完善 ✅

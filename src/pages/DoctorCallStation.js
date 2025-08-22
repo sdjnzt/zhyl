@@ -69,30 +69,30 @@ const { Title, Paragraph, Text } = Typography;
 const { Panel } = Collapse;
 
 const doctors = [
-  { name: '张伟医生', dept: '内科', title: '主任医师', avatar: '👨‍⚕️', status: '工作中', patients: 156, rating: 4.9 },
-  { name: '李静医生', dept: '内科', title: '副主任医师', avatar: '👩‍⚕️', status: '工作中', patients: 142, rating: 4.8 },
-  { name: '王磊医生', dept: '外科', title: '主治医师', avatar: '🧑‍⚕️', status: '工作中', patients: 128, rating: 4.7 },
-  { name: '刘芳医生', dept: '儿科', title: '主治医师', avatar: '👩‍⚕️', status: '工作中', patients: 189, rating: 4.9 },
-  { name: '陈强医生', dept: '儿科', title: '医师', avatar: '🧑‍⚕️', status: '工作中', patients: 98, rating: 4.6 },
-  { name: '赵敏医生', dept: '内科', title: '副主任医师', avatar: '👩‍⚕️', status: '工作中', patients: 167, rating: 4.8 },
-  { name: '孙涛医生', dept: '内科', title: '主治医师', avatar: '🧑‍⚕️', status: '工作中', patients: 134, rating: 4.7 },
-  { name: '周丽医生', dept: '内科', title: '医师', avatar: '👩‍⚕️', status: '工作中', patients: 89, rating: 4.5 },
-  { name: '马俊医生', dept: '内科', title: '主治医师', avatar: '🧑‍⚕️', status: '工作中', patients: 112, rating: 4.6 }
+  { name: '张伟医生', dept: '微山县微山湖医院内科', title: '主任医师', avatar: '👨‍⚕️', status: '工作中', patients: 156, rating: 4.9 },
+  { name: '李静医生', dept: '微山县微山湖医院内科', title: '副主任医师', avatar: '👩‍⚕️', status: '工作中', patients: 142, rating: 4.8 },
+  { name: '王磊医生', dept: '微山县微山湖医院外科', title: '主治医师', avatar: '🧑‍⚕️', status: '工作中', patients: 128, rating: 4.7 },
+  { name: '刘芳医生', dept: '微山县微山湖医院儿科', title: '主治医师', avatar: '👩‍⚕️', status: '工作中', patients: 189, rating: 4.9 },
+  { name: '陈强医生', dept: '微山县微山湖医院儿科', title: '医师', avatar: '🧑‍⚕️', status: '工作中', patients: 98, rating: 4.6 },
+  { name: '赵敏医生', dept: '微山县微山湖医院内科', title: '副主任医师', avatar: '👩‍⚕️', status: '工作中', patients: 167, rating: 4.8 },
+  { name: '孙涛医生', dept: '微山县微山湖医院内科', title: '主治医师', avatar: '🧑‍⚕️', status: '工作中', patients: 134, rating: 4.7 },
+  { name: '周丽医生', dept: '微山县微山湖医院内科', title: '医师', avatar: '👩‍⚕️', status: '工作中', patients: 89, rating: 4.5 },
+  { name: '马俊医生', dept: '微山县微山湖医院内科', title: '主治医师', avatar: '🧑‍⚕️', status: '工作中', patients: 112, rating: 4.6 }
 ];
 
-const areas = ['内科', '外科', '儿科', '妇产科'];
+const areas = ['微山县微山湖医院内科', '微山县微山湖医院外科', '微山县微山湖医院儿科', '微山县微山湖医院妇产科'];
 
 const initialQueue = [
-  { id: 1, queueNo: 'A101', name: '陈伟', gender: '男', age: 36, area: '内科', status: '待叫号', assignedDoctor: '张伟医生', priority: 'normal', symptoms: '咳嗽、发烧', waitTime: 15, contact: '13800138001' },
-  { id: 2, queueNo: 'A102', name: '王芳', gender: '女', age: 29, area: '内科', status: '待叫号', assignedDoctor: '张伟医生', priority: 'high', symptoms: '胸痛、呼吸困难', waitTime: 8, contact: '13800138002' },
-  { id: 3, queueNo: 'A103', name: '张敏', gender: '女', age: 61, area: '内科', status: '待叫号', assignedDoctor: '李静医生', priority: 'normal', symptoms: '高血压、头晕', waitTime: 22, contact: '13800138003' },
-  { id: 4, queueNo: 'A104', name: '吴静', gender: '女', age: 56, area: '内科', status: '待叫号', assignedDoctor: '李静医生', priority: 'normal', symptoms: '糖尿病、口渴', waitTime: 18, contact: '13800138004' },
-  { id: 5, queueNo: 'A105', name: '马丽', gender: '女', age: 38, area: '内科', status: '待叫号', assignedDoctor: '王磊医生', priority: 'low', symptoms: '感冒、流鼻涕', waitTime: 25, contact: '13800138005' },
-  { id: 6, queueNo: 'C301', name: '刘洋', gender: '男', age: 52, area: '内科', status: '已叫号', assignedDoctor: '王磊医生', priority: 'high', symptoms: '腹痛、恶心', waitTime: 0, contact: '13800138006' },
-  { id: 7, queueNo: 'B201', name: '李娜', gender: '女', age: 41, area: '儿科', status: '待叫号', assignedDoctor: '刘芳医生', priority: 'high', symptoms: '儿童发烧、咳嗽', waitTime: 12, contact: '13800138007' },
-  { id: 8, queueNo: 'B202', name: '周杰', gender: '男', age: 34, area: '儿科', status: '待叫号', assignedDoctor: '刘芳医生', priority: 'normal', symptoms: '儿童腹痛', waitTime: 19, contact: '13800138008' },
-  { id: 9, queueNo: 'B203', name: '许静', gender: '女', age: 27, area: '儿科', status: '待叫号', assignedDoctor: '陈强医生', priority: 'normal', symptoms: '儿童皮疹', waitTime: 16, contact: '13800138009' },
-  { id: 10, queueNo: 'B204', name: '宋佳', gender: '女', age: 26, area: '儿科', status: '待叫号', assignedDoctor: '陈强医生', priority: 'low', symptoms: '儿童感冒', waitTime: 28, contact: '13800138010' }
+  { id: 1, queueNo: 'A101', name: '陈伟', gender: '男', age: 36, area: '微山县微山湖医院内科', status: '待叫号', assignedDoctor: '张伟医生', priority: 'normal', symptoms: '咳嗽、发烧', waitTime: 15, contact: '13800138001' },
+  { id: 2, queueNo: 'A102', name: '王芳', gender: '女', age: 29, area: '微山县微山湖医院内科', status: '待叫号', assignedDoctor: '张伟医生', priority: 'high', symptoms: '胸痛、呼吸困难', waitTime: 8, contact: '13800138002' },
+  { id: 3, queueNo: 'A103', name: '张敏', gender: '女', age: 61, area: '微山县微山湖医院内科', status: '待叫号', assignedDoctor: '李静医生', priority: 'normal', symptoms: '高血压、头晕', waitTime: 22, contact: '13800138003' },
+  { id: 4, queueNo: 'A104', name: '吴静', gender: '女', age: 56, area: '微山县微山湖医院内科', status: '待叫号', assignedDoctor: '李静医生', priority: 'normal', symptoms: '糖尿病、口渴', waitTime: 18, contact: '13800138004' },
+  { id: 5, queueNo: 'A105', name: '马丽', gender: '女', age: 38, area: '微山县微山湖医院内科', status: '待叫号', assignedDoctor: '王磊医生', priority: 'low', symptoms: '感冒、流鼻涕', waitTime: 25, contact: '13800138005' },
+  { id: 6, queueNo: 'C301', name: '刘洋', gender: '男', age: 52, area: '微山县微山湖医院内科', status: '已叫号', assignedDoctor: '王磊医生', priority: 'high', symptoms: '腹痛、恶心', waitTime: 0, contact: '13800138006' },
+  { id: 7, queueNo: 'B201', name: '李娜', gender: '女', age: 41, area: '微山县微山湖医院儿科', status: '待叫号', assignedDoctor: '刘芳医生', priority: 'high', symptoms: '儿童发烧、咳嗽', waitTime: 12, contact: '13800138007' },
+  { id: 8, queueNo: 'B202', name: '周杰', gender: '男', age: 34, area: '微山县微山湖医院儿科', status: '待叫号', assignedDoctor: '刘芳医生', priority: 'normal', symptoms: '儿童腹痛', waitTime: 19, contact: '13800138008' },
+  { id: 9, queueNo: 'B203', name: '许静', gender: '女', age: 27, area: '微山县微山湖医院儿科', status: '待叫号', assignedDoctor: '陈强医生', priority: 'normal', symptoms: '儿童皮疹', waitTime: 16, contact: '13800138009' },
+  { id: 10, queueNo: 'B204', name: '宋佳', gender: '女', age: 26, area: '微山县微山湖医院儿科', status: '待叫号', assignedDoctor: '陈强医生', priority: 'low', symptoms: '儿童感冒', waitTime: 28, contact: '13800138010' }
 ];
 
 // 统计数据
@@ -109,10 +109,10 @@ const statistics = {
 
 // 科室工作量统计
 const departmentStats = [
-  { name: '内科', patients: 89, doctors: 6, avgWaitTime: 22, status: '繁忙' },
-  { name: '外科', patients: 45, doctors: 3, avgWaitTime: 18, status: '正常' },
-  { name: '儿科', patients: 67, doctors: 4, avgWaitTime: 15, status: '繁忙' },
-  { name: '妇产科', patients: 34, doctors: 2, avgWaitTime: 25, status: '正常' }
+  { name: '微山县微山湖医院内科', patients: 89, doctors: 6, avgWaitTime: 22, status: '繁忙' },
+  { name: '微山县微山湖医院外科', patients: 45, doctors: 3, avgWaitTime: 18, status: '正常' },
+  { name: '微山县微山湖医院儿科', patients: 67, doctors: 4, avgWaitTime: 15, status: '繁忙' },
+  { name: '微山县微山湖医院妇产科', patients: 34, doctors: 2, avgWaitTime: 25, status: '正常' }
 ];
 
 // 优先级分布
@@ -133,16 +133,16 @@ const recentActivities = [
 ];
 
 export default function DoctorCallStation() {
-  const [selectedArea, setSelectedArea] = useState('内科');
+  const [selectedArea, setSelectedArea] = useState('微山县微山湖医院内科');
   const [selectedDoctor, setSelectedDoctor] = useState(doctors[0].name);
   const [queue, setQueue] = useState(initialQueue);
   const [current, setCurrent] = useState(queue.find(q => q.status === '已叫号') || null);
   const [history, setHistory] = useState([
-    { queueNo: 'A101', name: '陈伟', gender: '男', age: 36, area: '内科', time: '09:01:12', skipped: false, manual: false, assignedDoctor: '张伟医生' },
-    { queueNo: 'A102', name: '王芳', gender: '女', age: 29, area: '内科', time: '09:03:25', skipped: false, manual: true, assignedDoctor: '张伟医生' },
-    { queueNo: 'A103', name: '张敏', gender: '女', age: 61, area: '内科', time: '09:05:40', skipped: true, manual: false, assignedDoctor: '李静医生' },
-    { queueNo: 'A104', name: '吴静', gender: '女', age: 56, area: '内科', time: '09:08:10', skipped: false, manual: false, assignedDoctor: '李静医生' },
-    { queueNo: 'A105', name: '马丽', gender: '女', age: 38, area: '内科', time: '09:10:55', skipped: false, manual: false, assignedDoctor: '王磊医生' }
+    { queueNo: 'A101', name: '陈伟', gender: '男', age: 36, area: '微山县微山湖医院内科', time: '09:01:12', skipped: false, manual: false, assignedDoctor: '张伟医生' },
+    { queueNo: 'A102', name: '王芳', gender: '女', age: 29, area: '微山县微山湖医院内科', time: '09:03:25', skipped: false, manual: true, assignedDoctor: '张伟医生' },
+    { queueNo: 'A103', name: '张敏', gender: '女', age: 61, area: '微山县微山湖医院内科', time: '09:05:40', skipped: true, manual: false, assignedDoctor: '李静医生' },
+    { queueNo: 'A104', name: '吴静', gender: '女', age: 56, area: '微山县微山湖医院内科', time: '09:08:10', skipped: false, manual: false, assignedDoctor: '李静医生' },
+    { queueNo: 'A105', name: '马丽', gender: '女', age: 38, area: '微山县微山湖医院内科', time: '09:10:55', skipped: false, manual: false, assignedDoctor: '王磊医生' }
   ]);
   const [doctorStatus, setDoctorStatus] = useState('工作中');
   const [sortKey, setSortKey] = useState('queueNo');

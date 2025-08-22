@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "homepage": "https://sdjnzt.github.io/zhyl",
-  "description": "智慧医疗导医分诊平台 - 基于React + Ant Design开发的现代化医疗服务系统",
+  "description": "微山县微山湖医院智慧医疗导医分诊平台 - 基于React + Ant Design开发的现代化医疗服务系统",
   "dependencies": {
     "@ant-design/icons": "^5.0.1",
     "@ant-design/plots": "^1.2.5",

@@ -1,6 +1,6 @@
 # 部署指南
 
-本文档将指导您如何将智慧医疗导医分诊平台部署到GitHub Pages。
+本文档将指导您如何将微山县微山湖医院智慧医疗导医分诊平台部署到GitHub Pages。
 
 ## 前置条件
 
@@ -29,7 +29,7 @@ git remote add origin https://github.com/[your-username]/smart-medical-triage-pl
 git add .
 
 # 提交代码
-git commit -m "初始化智慧医疗导医分诊平台项目"
+git commit -m "初始化微山县微山湖医院智慧医疗导医分诊平台项目"
 
 # 推送到主分支
 git push -u origin main

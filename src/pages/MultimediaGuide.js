@@ -92,7 +92,7 @@ const initialBanners = [
     likes: 67,
     downloads: 134,
     publishTime: '2025-08-10',
-    author: '心内科',
+    author: '心微山县微山湖医院内科',
     status: 'active'
   },
   { 
@@ -108,7 +108,7 @@ const initialBanners = [
     likes: 156,
     downloads: 289,
     publishTime: '2025-08-08',
-    author: '儿科',
+    author: '微山县微山湖医院儿科',
     status: 'active'
   },
   { 
@@ -124,7 +124,7 @@ const initialBanners = [
     likes: 234,
     downloads: 345,
     publishTime: '2025-08-05',
-    author: '急诊科',
+    author: '微山县微山湖医院急诊科',
     status: 'active'
   },
   { 
@@ -164,32 +164,32 @@ const initialBanners = [
 const initialFloors = [
   { 
     id: 1, 
-    floor: '一层', 
+    floor: '微山县微山湖医院一层',
     departments: [
-      { id: 101, name: '门诊大厅', location: '正门', info: '挂号、候诊、导医台', status: 'normal', waitTime: 15, doctors: 8 },
-      { id: 102, name: '急诊科', location: '西侧', info: '24小时急诊服务', status: 'busy', waitTime: 45, doctors: 15 },
-      { id: 103, name: '药房', location: '东侧', info: '取药、咨询', status: 'normal', waitTime: 20, doctors: 6 },
-      { id: 104, name: '放射科', location: '北侧', info: 'X光、CT、MRI', status: 'normal', waitTime: 30, doctors: 4 }
+      { id: 101, name: '微山县微山湖医院门诊大厅', location: '正门', info: '挂号、候诊、导医台', status: 'normal', waitTime: 15, doctors: 8 },
+      { id: 102, name: '微山县微山湖医院急诊科', location: '西侧', info: '24小时急诊服务', status: 'busy', waitTime: 45, doctors: 15 },
+      { id: 103, name: '微山县微山湖医院药房', location: '东侧', info: '取药、咨询', status: 'normal', waitTime: 20, doctors: 6 },
+      { id: 104, name: '微山县微山湖医院放射科', location: '北侧', info: 'X光、CT、MRI', status: 'normal', waitTime: 30, doctors: 4 }
     ]
   },
   { 
     id: 2, 
-    floor: '二层', 
+    floor: '微山县微山湖医院二层',
     departments: [
-      { id: 201, name: '内科', location: '南区', info: '内科诊室1-8', status: 'busy', waitTime: 40, doctors: 12 },
-      { id: 202, name: '外科', location: '北区', info: '外科诊室1-6', status: 'normal', waitTime: 25, doctors: 8 },
-      { id: 203, name: '检验科', location: '东区', info: '抽血、化验', status: 'normal', waitTime: 20, doctors: 5 },
-      { id: 204, name: '心电图室', location: '西区', info: '心电图检查', status: 'normal', waitTime: 15, doctors: 3 }
+      { id: 201, name: '微山县微山湖医院内科', location: '南区', info: '微山县微山湖医院内科诊室1-8', status: 'busy', waitTime: 40, doctors: 12 },
+      { id: 202, name: '微山县微山湖医院外科', location: '北区', info: '微山县微山湖医院外科诊室1-6', status: 'normal', waitTime: 25, doctors: 8 },
+      { id: 203, name: '微山县微山湖医院检验科', location: '东区', info: '抽血、化验', status: 'normal', waitTime: 20, doctors: 5 },
+      { id: 204, name: '微山县微山湖医院心电图室', location: '西区', info: '心电图检查', status: 'normal', waitTime: 15, doctors: 3 }
     ]
   },
   { 
     id: 3, 
-    floor: '三层', 
+    floor: '微山县微山湖医院三层',
     departments: [
-      { id: 301, name: '儿科', location: '南区', info: '儿科诊室1-6', status: 'busy', waitTime: 35, doctors: 6 },
-      { id: 302, name: '妇产科', location: '北区', info: '妇产科诊室1-4', status: 'normal', waitTime: 30, doctors: 10 },
-      { id: 303, name: '中医科', location: '东区', info: '中医诊室1-3', status: 'normal', waitTime: 20, doctors: 5 },
-      { id: 304, name: '皮肤科', location: '西区', info: '皮肤科诊室1-2', status: 'normal', waitTime: 25, doctors: 4 }
+      { id: 301, name: '微山县微山湖医院儿科', location: '南区', info: '微山县微山湖医院儿科诊室1-6', status: 'busy', waitTime: 35, doctors: 6 },
+      { id: 302, name: '微山县微山湖医院妇产科', location: '北区', info: '微山县微山湖医院妇产科诊室1-4', status: 'normal', waitTime: 30, doctors: 10 },
+      { id: 303, name: '微山县微山湖医院中医科', location: '东区', info: '中医诊室1-3', status: 'normal', waitTime: 20, doctors: 5 },
+      { id: 304, name: '微山县微山湖医院皮肤科', location: '西区', info: '皮肤科诊室1-2', status: 'normal', waitTime: 25, doctors: 4 }
     ]
   }
 ];
@@ -197,8 +197,8 @@ const initialFloors = [
 const initialNotices = [
   { 
     id: 1, 
-    content: '【紧急】今日急诊科搬迁至一楼西侧，请注意指引标识。', 
-    type: 'error', 
+    content: '微山县微山湖医院紧急通知：今日微山县微山湖医院急诊科搬迁至一楼西侧，请注意指引标识。',
+    type: 'error',
     publishTime: '2025-08-22 08:00', 
     expireTime: '2025-08-22 18:00',
     priority: 'high',
@@ -207,7 +207,7 @@ const initialNotices = [
   },
   { 
     id: 2, 
-    content: '门诊挂号时间为7:30-17:00，节假日无休。', 
+    content: '微山县微山湖医院门诊挂号时间为7:30-17:00，节假日无休。',
     type: 'info', 
     publishTime: '2025-08-22 08:00', 
     expireTime: '2025-08-22 18:00',
@@ -217,7 +217,7 @@ const initialNotices = [
   },
   { 
     id: 3, 
-    content: '请全程佩戴口罩，配合体温检测。', 
+    content: '微山县微山湖医院：请全程佩戴口罩，配合体温检测。',
     type: 'warning', 
     publishTime: '2025-08-22 08:00', 
     expireTime: '2025-08-22 18:00',
@@ -227,7 +227,7 @@ const initialNotices = [
   },
   { 
     id: 4, 
-    content: '【重要】6月10日将进行系统升级维护，请提前保存数据。', 
+    content: '微山县微山湖医院重要通知：6月10日将进行系统升级维护，请提前保存数据。',
     type: 'warning', 
     publishTime: '2024-05-28 10:00', 
     expireTime: '2025-08-10 23:59',
@@ -237,7 +237,7 @@ const initialNotices = [
   },
   { 
     id: 5, 
-    content: '【好消息】我院新增核磁共振设备，检查质量大幅提升。', 
+    content: '微山县微山湖医院:我院新增核磁共振设备，检查质量大幅提升。',
     type: 'success', 
     publishTime: '2024-05-25 14:00', 
     expireTime: '2025-08-25 23:59',

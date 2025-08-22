@@ -58,8 +58,8 @@ const { Step } = Steps;
 
 const departments = [
   {
-    name: '内科',
-    desc: '常见内科疾病诊疗',
+    name: '微山县微山湖医院内科',
+    desc: '常见微山县微山湖医院内科疾病诊疗',
     icon: <MedicineBoxOutlined style={{ color: '#1890ff' }} />,
     doctors: 12,
     patients: 156,
@@ -67,25 +67,25 @@ const departments = [
     specialties: ['高血压', '糖尿病', '心脏病', '呼吸系统疾病']
   },
   {
-    name: '外科',
+    name: '微山县微山湖医院外科',
     desc: '外伤、手术相关咨询',
     icon: <MedicineBoxOutlined style={{ color: '#faad14' }} />,
     doctors: 8,
     patients: 89,
     rating: 4.6,
-    specialties: ['普外科', '骨科', '神经外科', '胸外科']
+    specialties: ['普微山县微山湖医院外科', '骨科', '神经微山县微山湖医院外科', '胸微山县微山湖医院外科']
   },
   {
-    name: '儿科',
+    name: '微山县微山湖医院儿科',
     desc: '儿童疾病、疫苗接种',
     icon: <MedicineBoxOutlined style={{ color: '#52c41a' }} />,
     doctors: 6,
     patients: 234,
     rating: 4.9,
-    specialties: ['小儿内科', '小儿外科', '新生儿科', '儿童保健']
+    specialties: ['小儿微山县微山湖医院内科', '小儿微山县微山湖医院外科', '新生微山县微山湖医院儿科', '儿童保健']
   },
   {
-    name: '妇产科',
+    name: '微山县微山湖医院妇产科',
     desc: '妇女、孕产相关问题',
     icon: <MedicineBoxOutlined style={{ color: '#eb2f96' }} />,
     doctors: 10,
@@ -94,16 +94,16 @@ const departments = [
     specialties: ['产科', '妇科', '计划生育', '生殖医学']
   },
   {
-    name: '中医科',
+    name: '微山县微山湖医院中医科',
     desc: '中医调理、针灸推拿',
     icon: <MedicineBoxOutlined style={{ color: '#13c2c2' }} />,
     doctors: 5,
     patients: 67,
     rating: 4.5,
-    specialties: ['中医内科', '针灸推拿', '中药调理', '养生保健']
+    specialties: ['中医微山县微山湖医院内科', '针灸推拿', '中药调理', '养生保健']
   },
   {
-    name: '急诊科',
+    name: '微山县微山湖医院急诊科',
     desc: '24小时急诊救治',
     icon: <ThunderboltOutlined style={{ color: '#f5222d' }} />,
     doctors: 15,
@@ -116,7 +116,7 @@ const departments = [
 const doctors = [
   {
     name: '张伟',
-    dept: '内科',
+    dept: '微山县微山湖医院内科',
     title: '主任医师',
     avatar: 'https://img1.baidu.com/it/u=1.jpg',
     desc: '擅长高血压、糖尿病等慢性病管理，从医20年，发表论文30余篇',
@@ -130,21 +130,21 @@ const doctors = [
   },
   {
     name: '李静',
-    dept: '外科',
+    dept: '微山县微山湖医院外科',
     title: '副主任医师',
     avatar: 'https://img1.baidu.com/it/u=2.jpg',
-    desc: '擅长普外科手术及创伤救治，微创手术专家，手术成功率98%',
+    desc: '擅长普微山县微山湖医院外科手术及创伤救治，微创手术专家，手术成功率98%',
     queue: 1,
     time: '13:30-17:00',
     rating: 4.7,
     patients: 890,
-    specialties: ['普外科', '微创手术', '创伤救治'],
+    specialties: ['普微山县微山湖医院外科', '微创手术', '创伤救治'],
     experience: '15年',
     education: '复旦大学医学院硕士'
   },
   {
     name: '王磊',
-    dept: '儿科',
+    dept: '微山县微山湖医院儿科',
     title: '主治医师',
     avatar: 'https://img1.baidu.com/it/u=3.jpg',
     desc: '擅长小儿呼吸道疾病，对儿童常见病有丰富经验，深受家长信赖',
@@ -152,13 +152,13 @@ const doctors = [
     time: '09:00-12:00',
     rating: 4.8,
     patients: 2100,
-    specialties: ['小儿内科', '呼吸道疾病', '儿童保健'],
+    specialties: ['小儿微山县微山湖医院内科', '呼吸道疾病', '儿童保健'],
     experience: '12年',
     education: '首都医科大学本科'
   },
   {
     name: '刘芳',
-    dept: '妇产科',
+    dept: '微山县微山湖医院妇产科',
     title: '主治医师',
     avatar: 'https://img1.baidu.com/it/u=4.jpg',
     desc: '擅长孕产期保健及妇科常见病，产检经验丰富，接生技术娴熟',
@@ -172,15 +172,15 @@ const doctors = [
   },
   {
     name: '陈明',
-    dept: '中医科',
+    dept: '微山县微山湖医院中医科',
     title: '副主任医师',
     avatar: 'https://img1.baidu.com/it/u=5.jpg',
-    desc: '中医世家，擅长内科疾病的中医治疗，针灸推拿技术精湛',
+    desc: '中医世家，擅长微山县微山湖医院内科疾病的中医治疗，针灸推拿技术精湛',
     queue: 0,
     time: '08:00-12:00',
     rating: 4.5,
     patients: 780,
-    specialties: ['中医内科', '针灸', '中药调理'],
+    specialties: ['中医微山县微山湖医院内科', '针灸', '中药调理'],
     experience: '18年',
     education: '北京中医药大学硕士'
   }
@@ -189,31 +189,31 @@ const doctors = [
 const commonQuestions = [
   {
     q: '感冒发烧应该挂哪个科？',
-    a: '建议挂内科，若伴有呼吸道症状可挂呼吸内科。感冒初期可先到内科就诊，医生会根据症状判断是否需要转诊。',
+    a: '建议挂微山县微山湖医院内科，若伴有呼吸道症状可挂呼吸微山县微山湖医院内科。感冒初期可先到微山县微山湖医院内科就诊，医生会根据症状判断是否需要转诊。',
     category: '常见症状',
     hot: true
   },
   {
     q: '小孩发烧怎么办？',
-    a: '建议挂儿科，及时就医，注意物理降温。儿童发烧需要特别关注，建议到儿科专科就诊，避免延误病情。',
-    category: '儿科问题',
+    a: '建议挂微山县微山湖医院儿科，及时就医，注意物理降温。儿童发烧需要特别关注，建议到微山县微山湖医院儿科专科就诊，避免延误病情。',
+    category: '微山县微山湖医院儿科问题',
     hot: true
   },
   {
     q: '孕妇产检需要挂什么科？',
-    a: '建议挂妇产科，产科门诊。孕妇产检是孕期保健的重要环节，需要定期到产科门诊进行检查。',
+    a: '建议挂微山县微山湖医院妇产科，产科门诊。孕妇产检是孕期保健的重要环节，需要定期到产科门诊进行检查。',
     category: '产科问题',
     hot: false
   },
   {
     q: '外伤流血如何处理？',
-    a: '建议先止血包扎，尽快挂外科就诊。外伤处理需要专业医生评估，避免感染和并发症。',
+    a: '建议先止血包扎，尽快挂微山县微山湖医院外科就诊。外伤处理需要专业医生评估，避免感染和并发症。',
     category: '外伤处理',
     hot: true
   },
   {
     q: '想调理身体可以挂中医吗？',
-    a: '可以，建议挂中医科，根据症状选择合适的中医门诊。中医调理需要辨证论治，建议到正规中医科就诊。',
+    a: '可以，建议挂微山县微山湖医院中医科，根据症状选择合适的中医门诊。中医调理需要辨证论治，建议到正规微山县微山湖医院中医科就诊。',
     category: '中医调理',
     hot: false
   },
@@ -301,12 +301,12 @@ const healthArticles = [
 ];
 
 const hotDepts = [
-  { name: '内科', icon: <MedicineBoxOutlined style={{ color: '#1890ff' }} />, desc: '慢性病、感冒发烧等', hot: true, patients: 156, rating: 4.8 },
-  { name: '儿科', icon: <MedicineBoxOutlined style={{ color: '#52c41a' }} />, desc: '儿童常见病、疫苗接种', hot: true, patients: 234, rating: 4.9 },
-  { name: '外科', icon: <MedicineBoxOutlined style={{ color: '#faad14' }} />, desc: '外伤、手术相关', hot: false, patients: 89, rating: 4.6 },
-  { name: '妇产科', icon: <MedicineBoxOutlined style={{ color: '#eb2f96' }} />, desc: '妇女、孕产相关', hot: false, patients: 178, rating: 4.7 },
-  { name: '急诊科', icon: <ThunderboltOutlined style={{ color: '#f5222d' }} />, desc: '24小时急诊救治', hot: true, patients: 45, rating: 4.9 },
-  { name: '中医科', icon: <MedicineBoxOutlined style={{ color: '#13c2c2' }} />, desc: '中医调理、针灸推拿', hot: false, patients: 67, rating: 4.5 }
+  { name: '微山县微山湖医院内科', icon: <MedicineBoxOutlined style={{ color: '#1890ff' }} />, desc: '慢性病、感冒发烧等', hot: true, patients: 156, rating: 4.8 },
+  { name: '微山县微山湖医院儿科', icon: <MedicineBoxOutlined style={{ color: '#52c41a' }} />, desc: '儿童常见病、疫苗接种', hot: true, patients: 234, rating: 4.9 },
+  { name: '微山县微山湖医院外科', icon: <MedicineBoxOutlined style={{ color: '#faad14' }} />, desc: '外伤、手术相关', hot: false, patients: 89, rating: 4.6 },
+  { name: '微山县微山湖医院妇产科', icon: <MedicineBoxOutlined style={{ color: '#eb2f96' }} />, desc: '妇女、孕产相关', hot: false, patients: 178, rating: 4.7 },
+  { name: '微山县微山湖医院急诊科', icon: <ThunderboltOutlined style={{ color: '#f5222d' }} />, desc: '24小时急诊救治', hot: true, patients: 45, rating: 4.9 },
+  { name: '微山县微山湖医院中医科', icon: <MedicineBoxOutlined style={{ color: '#13c2c2' }} />, desc: '中医调理、针灸推拿', hot: false, patients: 67, rating: 4.5 }
 ];
 
 // 统计数据
@@ -378,10 +378,10 @@ export default function SmartGuide() {
       setSelfTestStep(s => s + 1);
     } else {
       // 简单自测结果
-      let result = '建议挂内科';
-      if (ans === '是' && selfTestQuestions[selfTestStep].key === 'q2') result = '建议挂外科';
-      else if (ans === '是' && selfTestQuestions[selfTestStep].key === 'q4') result = '建议挂儿科';
-      else if (ans === '是' && selfTestQuestions[selfTestStep].key === 'q5') result = '建议挂妇产科';
+      let result = '建议挂微山县微山湖医院内科';
+      if (ans === '是' && selfTestQuestions[selfTestStep].key === 'q2') result = '建议挂微山县微山湖医院外科';
+      else if (ans === '是' && selfTestQuestions[selfTestStep].key === 'q4') result = '建议挂微山县微山湖医院儿科';
+      else if (ans === '是' && selfTestQuestions[selfTestStep].key === 'q5') result = '建议挂微山县微山湖医院妇产科';
       setSelfTestResult(result);
     }
   };
@@ -396,10 +396,10 @@ export default function SmartGuide() {
     if (!input.trim()) return message.warning('请输入搜索内容');
     // 模拟搜索逻辑
     const results = [];
-    if (/内科|感冒|发烧|高血压|糖尿病/.test(input)) results.push(departments[0]);
-    if (/外科|外伤|手术/.test(input)) results.push(departments[1]);
-    if (/儿科|儿童|小孩|疫苗/.test(input)) results.push(departments[2]);
-    if (/妇产科|妇科|产科|怀孕/.test(input)) results.push(departments[3]);
+    if (/微山县微山湖医院内科|感冒|发烧|高血压|糖尿病/.test(input)) results.push(departments[0]);
+    if (/微山县微山湖医院外科|外伤|手术/.test(input)) results.push(departments[1]);
+    if (/微山县微山湖医院儿科|儿童|小孩|疫苗/.test(input)) results.push(departments[2]);
+    if (/微山县微山湖医院妇产科|妇科|产科|怀孕/.test(input)) results.push(departments[3]);
     if (/中医|针灸|推拿/.test(input)) results.push(departments[4]);
     if (/急诊|急救|急症/.test(input)) results.push(departments[5]);
 

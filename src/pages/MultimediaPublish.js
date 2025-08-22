@@ -74,7 +74,7 @@ const ACCEPT = 'image/*,video/*,audio/*,.pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.t
 const demoList = [
   {
     id: 1001,
-    title: '健康宣教图片',
+    title: '微山县微山湖医院健康宣教图片',
     content: '医院健康宣教活动宣传图片，欢迎大家积极参与。',
     files: [
       { uid: '1', name: '健康宣教图片.jpg', type: 'image/jpeg', demo: true, size: '2.5MB', downloads: 156, views: 890 }
@@ -90,7 +90,7 @@ const demoList = [
   },
   {
     id: 1002,
-    title: '医院导览视频',
+    title: '微山县微山湖医院医院导览视频',
     content: '新院区导览视频，帮助患者快速熟悉就诊环境。',
     files: [
       { uid: '2', name: '医院导览视频.mp4', type: 'video/mp4', demo: true, size: '15.2MB', downloads: 89, views: 567 }
@@ -106,13 +106,13 @@ const demoList = [
   },
   {
     id: 1003,
-    title: '健康讲座音频',
+    title: '微山县微山湖医院健康讲座音频',
     content: '专家讲解高血压防治知识音频，欢迎收听。',
     files: [
       { uid: '3', name: '健康讲座音频.mp3', type: 'audio/mp3', demo: true, size: '8.7MB', downloads: 234, views: 1234 }
     ],
     time: '2025-08-22 11:00',
-    author: '心内科',
+    author: '心微山县微山湖医院内科',
     category: '健康讲座',
     status: 'published',
     priority: 'high',
@@ -122,7 +122,7 @@ const demoList = [
   },
   {
     id: 1004,
-    title: '慢病管理手册',
+    title: '微山县微山湖医院慢病管理手册',
     content: '慢性病患者管理手册PDF，供患者下载学习。',
     files: [
       { uid: '4', name: '慢病管理手册.pdf', type: 'application/pdf', demo: true, size: '3.2MB', downloads: 445, views: 2100 }
@@ -138,7 +138,7 @@ const demoList = [
   },
   {
     id: 1005,
-    title: '医院导航PPT',
+    title: '微山县微山湖医院医院导航PPT',
     content: '医院导航PPT，详细介绍各楼层分布和就诊流程。',
     files: [
       { uid: '5', name: '医院导航.pptx', type: 'application/vnd.openxmlformats-officedocument.presentationml.presentation', demo: true, size: '5.8MB', downloads: 123, views: 678 }
@@ -154,7 +154,7 @@ const demoList = [
   },
   {
     id: 1006,
-    title: '门诊排班表',
+    title: '微山县微山湖医院门诊排班表',
     content: '门诊医生排班表Excel，方便患者查询。',
     files: [
       { uid: '6', name: '门诊排班表.xlsx', type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', demo: true, size: '1.2MB', downloads: 567, views: 3456 }
@@ -170,7 +170,7 @@ const demoList = [
   },
   {
     id: 1007,
-    title: '就诊须知文档',
+    title: '微山县微山湖医院就诊须知文档',
     content: '就诊须知Word文档，包含挂号、缴费、取药等流程。',
     files: [
       { uid: '7', name: '就诊须知.docx', type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', demo: true, size: '2.1MB', downloads: 234, views: 1567 }
@@ -186,13 +186,13 @@ const demoList = [
   },
   {
     id: 1008,
-    title: '急救知识手册',
+    title: '微山县微山湖医院急救知识手册',
     content: '常见急救知识手册，包含心肺复苏、止血包扎等实用技能。',
     files: [
       { uid: '8', name: '急救知识手册.pdf', type: 'application/pdf', demo: true, size: '4.5MB', downloads: 178, views: 987 }
     ],
     time: '2025-08-22 16:00',
-    author: '急诊科',
+    author: '微山县微山湖医院急诊科',
     category: '急救知识',
     status: 'published',
     priority: 'high',
@@ -892,14 +892,14 @@ export default function MultimediaPublish() {
             placeholder="请选择内容分类"
             style={{ width: '100%', marginTop: 8 }}
           >
-            <Select.Option value="健康宣教">健康宣教</Select.Option>
-            <Select.Option value="医院导览">医院导览</Select.Option>
-            <Select.Option value="健康讲座">健康讲座</Select.Option>
-            <Select.Option value="健康手册">健康手册</Select.Option>
-            <Select.Option value="医院导航">医院导航</Select.Option>
-            <Select.Option value="排班信息">排班信息</Select.Option>
-            <Select.Option value="就诊指南">就诊指南</Select.Option>
-            <Select.Option value="急救知识">急救知识</Select.Option>
+            <Select.Option value="健康宣教">微山县微山湖医院健康宣教</Select.Option>
+            <Select.Option value="医院导览">微山县微山湖医院医院导览</Select.Option>
+            <Select.Option value="健康讲座">微山县微山湖医院健康讲座</Select.Option>
+            <Select.Option value="健康手册">微山县微山湖医院健康手册</Select.Option>
+            <Select.Option value="医院导航">微山县微山湖医院医院导航</Select.Option>
+            <Select.Option value="排班信息">微山县微山湖医院排班信息</Select.Option>
+            <Select.Option value="就诊指南">微山县微山湖医院就诊指南</Select.Option>
+            <Select.Option value="急救知识">微山县微山湖医院急救知识</Select.Option>
           </Select>
         </div>
 

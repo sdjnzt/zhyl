@@ -250,7 +250,7 @@ const MainLayout = ({ children }) => {
           background: 'rgba(255, 255, 255, 0.1)',
           overflow: 'hidden'
         }}>
-          {!collapsed && <span>智慧医疗导医分诊平台</span>}
+          {!collapsed && <span>微山县微山湖医院智慧医疗导医分诊平台</span>}
           {collapsed && <CloudServerOutlined style={{ fontSize: '24px' }} />}
         </div>
         <div style={{ 
@@ -331,7 +331,7 @@ const MainLayout = ({ children }) => {
         </Content>
         
         <Footer style={{ textAlign: 'center', padding: '12px 50px' }}>
-          智慧医疗导医分诊平台©2025 Created by Tech Team
+          微山县微山湖医院智慧医疗导医分诊平台©2025 Created by Tech Team
         </Footer>
       </Layout>
       

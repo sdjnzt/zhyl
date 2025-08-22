@@ -1,6 +1,6 @@
 # GitHub设置指南
 
-本指南将帮助您设置GitHub账户并将智慧医疗导医分诊平台项目上传到GitHub。
+本指南将帮助您设置GitHub账户并将微山县微山湖医院智慧医疗导医分诊平台项目上传到GitHub。
 
 ## 第一步：创建GitHub账户
 
@@ -32,7 +32,7 @@ git config --global user.email "your-email@example.com"
 2. 点击右上角的 "+" 按钮，选择 "New repository"
 3. 填写仓库信息：
    - Repository name: `smart-medical-triage-platform`
-   - Description: `智慧医疗导医分诊平台`
+   - Description: `微山县微山湖医院智慧医疗导医分诊平台`
    - 选择 "Public"（免费GitHub Pages需要公开仓库）
    - 不要勾选 "Initialize this repository with a README"
 4. 点击 "Create repository"
@@ -53,7 +53,7 @@ git init
 git add .
 
 # 提交代码
-git commit -m "初始化智慧医疗导医分诊平台项目"
+git commit -m "初始化微山县微山湖医院智慧医疗导医分诊平台项目"
 
 # 设置主分支名称
 git branch -M main

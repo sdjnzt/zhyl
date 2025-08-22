@@ -72,7 +72,7 @@ const initialPatients = [
     queueNo: 'A101',
     assignedDoctor: '',
     triageTime: '',
-    area: '内科',
+    area: '微山县微山湖医院内科',
     priority: 'normal',
     symptoms: '咳嗽、发烧',
     waitTime: 40,
@@ -90,7 +90,7 @@ const initialPatients = [
     queueNo: 'A102',
     assignedDoctor: '',
     triageTime: '',
-    area: '外科',
+    area: '微山县微山湖医院外科',
     priority: 'high',
     symptoms: '手臂骨折',
     waitTime: 10,
@@ -108,7 +108,7 @@ const initialPatients = [
     queueNo: 'B201',
     assignedDoctor: '陈医生',
     triageTime: '09:15',
-    area: '儿科',
+    area: '微山县微山湖医院儿科',
     priority: 'normal',
     symptoms: '儿童发烧',
     waitTime: 0,
@@ -126,7 +126,7 @@ const initialPatients = [
     queueNo: 'C301',
     assignedDoctor: '王医生',
     triageTime: '09:20',
-    area: '内科',
+    area: '微山县微山湖医院内科',
     priority: 'high',
     symptoms: '胸痛、呼吸困难',
     waitTime: 0,
@@ -144,7 +144,7 @@ const initialPatients = [
     queueNo: 'A103',
     assignedDoctor: '',
     triageTime: '',
-    area: '外科',
+    area: '微山县微山湖医院外科',
     priority: 'normal',
     symptoms: '膝关节疼痛',
     waitTime: 5,
@@ -158,8 +158,8 @@ const initialPatients = [
 const initialAreas = [
   {
     id: 1,
-    name: '内科区',
-    description: '内科疾病诊疗区域',
+    name: '微山县微山湖医院内科区',
+    description: '微山县微山湖医院内科疾病诊疗区域',
     doctors: 8,
     patients: 25,
     status: 'busy',
@@ -167,8 +167,8 @@ const initialAreas = [
   },
   {
     id: 2,
-    name: '外科区',
-    description: '外科手术及创伤救治区域',
+    name: '微山县微山湖医院外科区',
+    description: '微山县微山湖医院外科手术及创伤救治区域',
     doctors: 6,
     patients: 18,
     status: 'normal',
@@ -176,7 +176,7 @@ const initialAreas = [
   },
   {
     id: 3,
-    name: '儿科区',
+    name: '微山县微山湖医院儿科区',
     description: '儿童疾病诊疗区域',
     doctors: 4,
     patients: 32,
@@ -185,7 +185,7 @@ const initialAreas = [
   },
   {
     id: 4,
-    name: '妇产科区',
+    name: '微山县微山湖医院妇产科区',
     description: '妇科及产科诊疗区域',
     doctors: 5,
     patients: 15,
@@ -219,11 +219,11 @@ const statistics = {
 
 // 科室工作量统计
 const departmentStats = [
-  { name: '内科', patients: 45, doctors: 8, waitTime: 35, status: 'busy' },
-  { name: '外科', patients: 28, doctors: 6, waitTime: 20, status: 'normal' },
-  { name: '儿科', patients: 38, doctors: 4, waitTime: 45, status: 'crowded' },
-  { name: '妇产科', patients: 22, doctors: 5, waitTime: 25, status: 'normal' },
-  { name: '急诊科', patients: 15, doctors: 12, waitTime: 15, status: 'normal' }
+  { name: '微山县微山湖医院内科', patients: 45, doctors: 8, waitTime: 35, status: 'busy' },
+  { name: '微山县微山湖医院外科', patients: 28, doctors: 6, waitTime: 20, status: 'normal' },
+  { name: '微山县微山湖医院儿科', patients: 38, doctors: 4, waitTime: 45, status: 'crowded' },
+  { name: '微山县微山湖医院妇产科', patients: 22, doctors: 5, waitTime: 25, status: 'normal' },
+  { name: '微山县微山湖医院急诊科', patients: 15, doctors: 12, waitTime: 15, status: 'normal' }
 ];
 
 // 优先级统计
@@ -260,15 +260,15 @@ export default function NurseTriageStation() {
   const [patientForm] = Form.useForm();
   const [logs, setLogs] = useState([
     { time: '09:00:01', action: '系统启动', details: '' },
-    { time: '09:05:12', action: '新增患者', details: '陈伟 内科' },
-    { time: '09:10:23', action: '分诊', details: '李娜 儿科' },
-    { time: '09:15:45', action: '叫号', details: '刘洋 内科' },
-    { time: '09:20:10', action: '新增分区', details: '妇产科' },
-    { time: '09:25:33', action: '批量分诊', details: '王芳、张敏 外科' },
+    { time: '09:05:12', action: '新增患者', details: '陈伟 微山县微山湖医院内科' },
+    { time: '09:10:23', action: '分诊', details: '李娜 微山县微山湖医院儿科' },
+    { time: '09:15:45', action: '叫号', details: '刘洋 微山县微山湖医院内科' },
+    { time: '09:20:10', action: '新增分区', details: '微山县微山湖医院妇产科' },
+    { time: '09:25:33', action: '批量分诊', details: '王芳、张敏 微山县微山湖医院外科' },
     { time: '09:30:50', action: '批量叫号', details: '孙婷、吴静' },
-    { time: '09:35:18', action: '删除患者', details: '何军 内科' },
+    { time: '09:35:18', action: '删除患者', details: '何军 微山县微山湖医院内科' },
     { time: '09:40:00', action: '导出Excel', details: '' },
-    { time: '09:45:22', action: '编辑分区备注', details: '儿科' },
+    { time: '09:45:22', action: '编辑分区备注', details: '微山县微山湖医院儿科' },
   ]);
   const [currentPage, setCurrentPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
@@ -968,11 +968,11 @@ export default function NurseTriageStation() {
             <Col span={12}>
               <Form.Item name="area" label="就诊科室" rules={[{ required: true, message: '请选择就诊科室' }]}>
                 <Select placeholder="请选择就诊科室">
-                  <Option value="内科">内科</Option>
-                  <Option value="外科">外科</Option>
-                  <Option value="儿科">儿科</Option>
-                  <Option value="妇产科">妇产科</Option>
-                  <Option value="急诊科">急诊科</Option>
+                  <Option value="微山县微山湖医院内科">微山县微山湖医院内科</Option>
+                  <Option value="微山县微山湖医院外科">微山县微山湖医院外科</Option>
+                  <Option value="微山县微山湖医院儿科">微山县微山湖医院儿科</Option>
+                  <Option value="微山县微山湖医院妇产科">微山县微山湖医院妇产科</Option>
+                  <Option value="微山县微山湖医院急诊科">微山县微山湖医院急诊科</Option>
                 </Select>
               </Form.Item>
             </Col>

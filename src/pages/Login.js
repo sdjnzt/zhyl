@@ -95,7 +95,7 @@ const Login = ({ onLogin }) => {
             padding: '0 40px'
           }}>
             <Title style={{ color: 'white', fontSize: '42px', marginBottom: '24px', letterSpacing: 2 }}>
-              智慧医疗导医分诊平台
+              微山县微山湖医院智慧医疗导医分诊平台
             </Title>
             <Title level={2} style={{ color: 'white', marginTop: 0, fontWeight: 400, fontSize: 28, letterSpacing: 1 }}>
               医疗信息化 · 智能分诊 · 高效服务
@@ -132,7 +132,7 @@ const Login = ({ onLogin }) => {
             }}
           >
             <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-              <Title level={3} style={{ marginBottom: '8px', color: '#0958d9', fontWeight: 700, letterSpacing: 1 }}>欢迎登录智慧医疗导医分诊平台</Title>
+              <Title level={3} style={{ marginBottom: '8px', color: '#0958d9', fontWeight: 700, letterSpacing: 1 }}>欢迎登录微山县微山湖医院智慧医疗导医分诊平台</Title>
               <Text type="secondary" style={{ fontSize: 16 }}>为医院与患者提供智能、高效、便捷的分诊服务</Text>
             </div>
             {loginError && (
