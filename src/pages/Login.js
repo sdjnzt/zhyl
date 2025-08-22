@@ -209,12 +209,12 @@ const Login = ({ onLogin }) => {
                 </Button>
               </Form.Item>
             </Form>
-            <Divider style={{ margin: '16px 0' }}>
-              <Text type="secondary">安全提示</Text>
-            </Divider>
-            <Paragraph type="secondary" style={{ fontSize: '13px', textAlign: 'center', marginBottom: 0 }}>
-              本系统仅限授权人员使用，未经授权访问将被追究法律责任。
-            </Paragraph>
+            {/*<Divider style={{ margin: '16px 0' }}>*/}
+            {/*  <Text type="secondary">安全提示</Text>*/}
+            {/*</Divider>*/}
+            {/*<Paragraph type="secondary" style={{ fontSize: '13px', textAlign: 'center', marginBottom: 0 }}>*/}
+            {/*  本系统仅限授权人员使用，未经授权访问将被追究法律责任。*/}
+            {/*</Paragraph>*/}
             {/* <Paragraph style={{ fontSize: '13px', color: '#888', textAlign: 'center', marginTop: 12, marginBottom: 0 }}>
               我们致力于为您提供高效、专业、智能的医疗分诊与信息服务。不论您遇到什么问题，都可以随时联系我们，我们会尽力为您提供最优的解决方案，助力您的医疗服务更加顺畅！
             </Paragraph> */}
